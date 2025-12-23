@@ -55,7 +55,7 @@ export default function Hero() {
             end: endValue,
             scrub: true,
             pin:true,
-            markers: true, // optional for debugging
+            // markers: true, // optional for debugging 
         },
         }).to(video, {
         currentTime: video.duration || 1, // scrub through entire video
@@ -108,7 +108,7 @@ export default function Hero() {
                 </div>
             </div>
             </section>
-            <div className="video absolute inset-0 z-[-10]">
+            <div className="video absolute bottom-0 inset-0 z-[-10]">
                 <video
                     ref={videoRef}
                     src="/videos/output.mp4"
