@@ -5,9 +5,10 @@ import { ScrollTrigger } from "gsap/all"
 import { useRef } from "react"
 gsap.registerPlugin(ScrollTrigger)
 export default function GsapScrollTrigger() {
-    const scrollRef=useRef(null)
+    const scrollRef=useRef<HTMLDivElement>(null)
     useGSAP(()=>{
-        const boxes=gsap.utils.toArray(scrollRef.current?.children)
+        if (!scrollRef.current) return;
+        const boxes=gsap.utils.toArray(scrollRef.current.children)
         boxes.forEach((box:any)=>{
             gsap.to(box,{
                 x:150 * (boxes.indexOf(box) + 5),

@@ -40,6 +40,10 @@ body {
   overflow-x:hidden;
   width:100%;
 }
+#footer-title{
+    font-family:Arial, Helvetica, sans-serif;
+    font-weight: 700;
+}
 @utility flex-center {
   @apply flex justify-center items-center;
 } 
@@ -64,13 +68,31 @@ body {
 @utility btn-secondary{
   @apply dark:border-white/5 border-gray-200 dark:text-white text-black h-9 px-4 rounded-3xl font-medium dark:hover:bg-white/5 transition-all hover:bg-gray-100;
 }
-@utility radial-gradient{
-  background:radial-gradient(
-    circle at center,
-    #434343 0%,
-    #000 1%,
-    transparent 100%
-  )
+@utility radial-gradient {
+    background-image: radial-gradient(
+            circle at center,
+            #434343 0%,
+            #000 50%,
+            transparent 100%
+    );
+}
+@utility radial-gradient-light {
+    background-image: radial-gradient(
+            circle at center,
+            #434343 0%,
+            #000 50%,
+            transparent 100%
+    );
+}
+
+@utility masked-img {
+    mask-image: url("../public/images/mask-img.png");
+    mask-repeat: no-repeat;
+    mask-position: center;
+    mask-size: 50%;
+}
+@utility box {
+    @apply transition-all p-4 sm:p-6 rounded-xl cursor-pointer dark:bg-[rgba(225,225,225,.1)] bg-[rgba(225,225,225,.5)] hover:backdrop-blur-sm;
 }
 @layer components {
     main {
@@ -162,9 +184,7 @@ body {
 
         .list {
             @apply container mx-auto relative z-10 flex md:flex-row flex-col justify-between items-start gap-20 pt-40 2xl:px-0 px-5;
-            .box {
-               @apply transition-all p-4 sm:p-6 rounded-xl cursor-pointer dark:hover:bg-[rgba(0,0,0,.5)] hover:bg-[rgba(225,225,225,.5)] hover:backdrop-blur-sm;
-            }
+
             .popular {
                 @apply space-y-8 transition-all w-full md:w-fit;
             }
@@ -279,7 +299,7 @@ body {
                 @apply opacity-0 md:px-0 px-5 space-y-5 absolute md:bottom-5 bottom-52 left-1/2 -translate-x-1/2;
 
                 h3 {
-                    @apply md:text-5xl text-2xl text-center font-serif md:w-full w-80 text-white;
+                    @apply md:text-5xl text-2xl text-center md:w-full w-80 text-white;
                 }
 
                 p {
@@ -304,7 +324,7 @@ body {
             @apply grid md:grid-cols-4 grid-cols-2 md:gap-20 gap-10 sm:mb-32 mb-20 relative z-10 md:max-w-6xl md:mx-auto;
 
             button {
-                @apply md:text-3xl text-xl pb-2 cursor-pointer   border-b-1 transition-colors ;
+                @apply md:text-3xl text-xl pb-2 cursor-pointer border-b transition-colors ;
             }
         }
 
@@ -336,10 +356,10 @@ body {
             @apply flex max-md:flex-col gap-10 md:items-center justify-between w-full lg:absolute bottom-0;
 
             .info {
-                @apply space-y-4 lg:translate-y-20;
+                @apply space-y-4 ;
 
                 #title {
-                    @apply  md:text-6xl text-3xl  max-w-40;
+                    @apply  md:text-6xl text-3xl ;
                 }
             }
 
@@ -347,7 +367,7 @@ body {
                 @apply space-y-5 md:max-w-md text-left;
 
                 h2 {
-                    @apply md:text-5xl text-3xl font-serif;
+                    @apply md:text-5xl text-3xl;
                 }
 
                 p {

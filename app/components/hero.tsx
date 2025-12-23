@@ -52,7 +52,7 @@ export default function Hero() {
         scrollTrigger: {
             trigger: "video",
             start: startValue,
-            end: endValue,
+            end: endValue,  
             scrub: true,
             pin:true,
             // markers: true, // optional for debugging 
@@ -60,6 +60,7 @@ export default function Hero() {
         }).to(video, {
         currentTime: video.duration || 1, // scrub through entire video
         ease: "none",
+
         });
 
         // Refresh after load so ScrollTrigger recalculates correctly
@@ -73,8 +74,8 @@ export default function Hero() {
     
     return (
         <>
-            <section id="hero" className="noisy ">
-            <h1 className="title uppercase">Dorito</h1>
+            <section id="hero" className="noisy">
+            <h1 className="title uppercase font-black">Dorito</h1>
             <Image
                 src="/images/hero-left-leaf.png"
                 alt="left-leaf"
@@ -108,7 +109,7 @@ export default function Hero() {
                 </div>
             </div>
             </section>
-            <div className="video absolute bottom-0 inset-0 z-[-10]">
+            <div className="video absolute bottom-0 inset-0 ">
                 <video
                     ref={videoRef}
                     src="/videos/output.mp4"
