@@ -7,6 +7,7 @@ import About from "../components/about"
 import Art from "../components/art"
 import Menu from "../components/menu"
 import Footer from "../components/footer"
+import Contact from "../components/contact"
 
 gsap.registerPlugin(ScrollTrigger, SplitText)
 export default function Lander() {
@@ -18,6 +19,7 @@ export default function Lander() {
         <About/>
         <Art/>
         <Menu/>
+        <Contact/>
         <Footer/>
     </main>
   )

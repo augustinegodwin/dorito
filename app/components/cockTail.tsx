@@ -23,7 +23,7 @@ export default function CockTails() {
         })
     },[])
     return (
-        <section id="cocktails" className="noisy overflow-hidden    ">
+        <section id="cocktails" className="noisy overflow-hidden        ">
             <Image
                 src="/images/cocktail-left-leaf.png" 
                 alt="l-leaf" 

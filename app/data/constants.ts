@@ -22,29 +22,29 @@ export const navLinks:{id:number, title:string, route:string, gradient:boolean, 
     },
     {
         id:3,
-        title:"Business",
-        route:"#",
+        title:"Creative",
+        route:"#art",
         gradient:false,
         target:"_self"
     },
     {
         id:4,
-        title:"Pricing",
-        route:"#",
+        title:"Menu List",
+        route:"#menu",
         gradient:false,
         target:"_self"
     },
-    {
-        id:5,
-        title:"Images",
-        route:"#",
-        gradient:true,
-        target:"_self"
-    },
+    // {
+    //     id:5,
+    //     title:"Images",
+    //     route:"#",
+    //     gradient:true,
+    //     target:"_self"
+    // },
     {
         id:6,
-        title:"Download",
-        route:"#",
+        title:"Contact",
+        route:"#contact",
         gradient:false,
         target:"_self"
     },
